@@ -14,6 +14,7 @@ const mapWithBasePath = <T extends object>(apis: T): T => {
   });
 };
 
+// TODO check
 export const API_ENDPOINTS = mapWithBasePath({
   config: '/api/config',
   proxy: '/api/proxy',
@@ -28,7 +29,8 @@ export const API_ENDPOINTS = mapWithBasePath({
   pluginStore: '/api/plugin/store',
 
   // chat
-  chat: (provider: string) => withBasePath(`/api/chat/${provider}`),
+  chat: '/api/openai/chat',
+  // chat: (provider: string) => withBasePath(`/api/chat/${provider}`),
 
   // trace
   trace: '/api/trace',

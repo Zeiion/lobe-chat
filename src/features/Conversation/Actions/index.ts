@@ -1,4 +1,5 @@
 import { App } from 'antd';
+import copyToClipboard from 'copy-to-clipboard';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

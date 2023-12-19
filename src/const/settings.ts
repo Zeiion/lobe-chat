@@ -1,6 +1,7 @@
 import { DEFAULT_AGENT_META } from '@/const/meta';
 import { ModelProvider } from '@/libs/agent-runtime';
 import { LobeAgentConfig, LobeAgentTTSConfig } from '@/types/agent';
+import { LanguageModel } from '@/types/llm';
 import {
   GlobalBaseSettings,
   GlobalDefaultAgent,
@@ -33,7 +34,7 @@ export const DEFAULT_AGENT_CONFIG: LobeAgentConfig = {
   displayMode: 'chat',
   enableAutoCreateTopic: true,
   historyCount: 1,
-  model: 'gpt-3.5-turbo',
+  model: LanguageModel.BUAA_GPT,
   params: {
     frequency_penalty: 0,
     presence_penalty: 0,

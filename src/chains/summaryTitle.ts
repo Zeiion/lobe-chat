@@ -1,5 +1,6 @@
 import { chatHelpers } from '@/store/chat/helpers';
 import { globalHelpers } from '@/store/global/helpers';
+import { LanguageModel } from '@/types/llm';
 import { ChatStreamPayload, OpenAIChatMessage } from '@/types/openai/chat';
 
 export const chainSummaryTitle = async (
@@ -21,9 +22,9 @@ export const chainSummaryTitle = async (
   ];
   // 如果超过 16k，则使用 GPT-4-turbo 模型
   const tokens = await chatHelpers.getMessagesTokenCount(finalMessages);
-  let model: string | undefined = undefined;
-  if (tokens > 16_000) {
-    model = 'gpt-4-turbo-preview';
+  let model: LanguageModel | undefined = undefined;
+  if (tokens > 4000) {
+    model = LanguageModel.BUAA_GPT; // TODO
   }
 
   return {

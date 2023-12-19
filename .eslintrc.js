@@ -33,5 +33,10 @@ config.overrides = [
     },
   },
 ];
+// added
+config.rules['unicorn/no-array-reduce'] = 0;
+config.rules['unused-imports/no-unused-imports'] = 0;
+config.rules['unused-imports/no-unused-vars'] = 0;
+config.rules['@typescript-eslint/no-unused-vars'] = 0;
 
 module.exports = config;

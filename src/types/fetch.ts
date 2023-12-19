@@ -17,6 +17,8 @@ export const ChatErrorType = {
   MethodNotAllowed: 405, // 不支持
   TooManyRequests: 429,
 
+  NotAllowed: 490, // 不允许
+
   // ******* 服务端错误 ******* //
   InternalServerError: 500,
   BadGateway: 502,

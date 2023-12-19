@@ -4,7 +4,7 @@
     "title": "{{name}} 插件配置"
   },
   "response": {
-    "400": "很抱歉，服务器不明白您的请求，请确认您的请求参数是否正确",
+    "400": "很抱歉，目前平台不支持该输入，您可以从以下服务中选择其中一项：",
     "401": "很抱歉，服务器拒绝了您的请求，可能是因为您的权限不足或未提供有效的身份验证",
     "403": "很抱歉，服务器拒绝了您的请求，您没有访问此内容的权限 ",
     "404": "很抱歉，服务器找不到您请求的页面或资源，请确认您的 URL 是否正确",
@@ -45,9 +45,7 @@
     "PluginServerError": "插件服务端请求返回出错，请检查根据下面的报错信息检查你的插件描述文件、插件配置或服务端实现",
     "PluginGatewayError": "很抱歉，插件网关出现错误，请检查插件网关配置是否正确",
     "PluginOpenApiInitError": "很抱歉，OpenAPI 客户端初始化失败，请检查 OpenAPI 的配置信息是否正确",
-    "InvalidAccessCode": "密码不正确或为空，请输入正确的访问密码，或者添加自定义 API Key",
     "LocationNotSupportError": "很抱歉，你的所在位置不支持此模型服务，可能是由于地区限制或服务未开通。请确认当前位置是否支持使用此服务，或尝试使用其他位置信息。",
-    "OpenAIBizError": "请求 OpenAI 服务出错，请根据以下信息排查或重试",
     "NoOpenAIAPIKey": "OpenAI API Key 为空，请添加自定义 OpenAI API Key",
     "ZhipuBizError": "请求智谱服务出错，请根据以下信息排查或重试",
     "InvalidZhipuAPIKey": "Zhipu API Key 不正确或为空，请检查 Zhipu API Key 后重试",
@@ -76,7 +74,10 @@
     "InvalidOllamaArgs": "Ollama 配置不正确，请检查 Ollama 配置后重试",
     "OllamaBizError": "请求 Ollama 服务出错，请根据以下信息排查或重试",
     "OllamaServiceUnavailable": "未检测到 Ollama 服务，请检查是否正常启动",
-    "AgentRuntimeError": "Lobe 语言模型运行时执行出错，请根据以下信息排查或重试"
+    "AgentRuntimeError": "Lobe 语言模型运行时执行出错，请根据以下信息排查或重试",
+    "InvalidAccessCode": "密码不正确或为空，请输入正确的访问密码，或者添加自定义 API Key",
+    "OpenAIBizError": "请求服务出错，请根据以下信息排查或重试",
+    "NoAPIKey": "OpenAI API Key 为空，请添加自定义 OpenAI API Key"
   },
   "stt": {
     "responseError": "服务请求失败，请检查配置或重试"

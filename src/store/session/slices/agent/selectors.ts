@@ -7,6 +7,7 @@ import { useGlobalStore } from '@/store/global';
 import { settingsSelectors } from '@/store/global/selectors';
 import { SessionStore } from '@/store/session';
 import { LobeAgentTTSConfig } from '@/types/agent';
+import { LanguageModel } from '@/types/llm';
 import { MetaData } from '@/types/meta';
 import { merge } from '@/utils/merge';
 
@@ -31,7 +32,7 @@ const currentAgentSystemRole = (s: SessionStore) => {
 const currentAgentModel = (s: SessionStore): string => {
   const config = currentAgentConfig(s);
 
-  return config?.model || 'gpt-3.5-turbo';
+  return config?.model || LanguageModel.BUAA_GPT;
 };
 
 const currentAgentModelProvider = (s: SessionStore) => {

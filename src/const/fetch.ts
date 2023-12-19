@@ -25,3 +25,5 @@ export const getOpenAIAuthFromRequest = (req: Request) => {
 
   return { accessCode, apiKey, apiVersion, endpoint, oauthAuthorized, useAzure };
 };
+
+// TODO header

@@ -1,4 +1,5 @@
 import type { SessionStore } from '@/store/session';
+import { LanguageModel } from '@/types/llm';
 import { LobeAgentSession, LobeSessionType } from '@/types/session';
 
 import { initLobeSession } from '../initialState';
@@ -11,7 +12,7 @@ describe('currentSession', () => {
       {
         id: '1',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -20,7 +21,7 @@ describe('currentSession', () => {
       {
         id: '2',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -45,7 +46,7 @@ describe('currentSessionSafe', () => {
       {
         id: '1',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -54,7 +55,7 @@ describe('currentSessionSafe', () => {
       {
         id: '2',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -79,7 +80,7 @@ describe('getSessionById', () => {
       {
         id: '1',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -88,7 +89,7 @@ describe('getSessionById', () => {
       {
         id: '2',
         config: {
-          model: 'gpt-3.5-turbo',
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },

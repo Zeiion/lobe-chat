@@ -11,6 +11,8 @@
   "about": "About",
   "advanceSettings": "Advanced Settings",
   "appInitializing": "LobeChat is initializing, please wait...",
+  "appName": "Structure AI",
+  "archive": "Archive",
   "autoGenerate": "Auto Generate",
   "autoGenerateTooltip": "Auto-generate agent description based on prompts",
   "cancel": "Cancel",
