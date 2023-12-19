@@ -50,7 +50,7 @@ export interface LobeAgentConfig {
    * 系统角色
    */
   systemRole: string;
-  /**
+  /**F
    * 语音服务
    */
   tts: LobeAgentTTSConfig;

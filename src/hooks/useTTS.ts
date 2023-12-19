@@ -10,7 +10,7 @@ import {
 import isEqual from 'fast-deep-equal';
 
 import { createHeaderWithOpenAI } from '@/services/_header';
-import { OPENAI_URLS, TTS_URL } from '@/services/_url';
+import { LLM_REQUEST_URLS, TTS_URL } from '@/services/_url';
 import { useGlobalStore } from '@/store/global';
 import { settingsSelectors } from '@/store/global/selectors';
 import { useSessionStore } from '@/store/session';
@@ -36,7 +36,7 @@ export const useTTS = (content: string, config?: TTSConfig) => {
       options = {
         api: {
           headers: createHeaderWithOpenAI(),
-          serviceUrl: OPENAI_URLS.tts,
+          serviceUrl: LLM_REQUEST_URLS.tts,
         },
         options: {
           model: ttsSettings.openAI.ttsModel,

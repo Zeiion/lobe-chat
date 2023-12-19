@@ -53,7 +53,7 @@ const AgentCard = memo<AgentCardProps>(({ CardRender, mobile }) => {
           <CardRender items={agentList.slice(0, 3)} renderItem={GridRender} />
           <div className={styles.subTitle}>{t('title.allAgents')}</div>
           <CardRender
-            items={agentList.slice(3)}
+            items={agentList}
             renderItem={GridRender}
             spotlight={mobile ? undefined : false}
           />

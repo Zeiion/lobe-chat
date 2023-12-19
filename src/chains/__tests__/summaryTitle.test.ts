@@ -50,7 +50,7 @@ describe('chainSummaryTitle', () => {
           role: 'user',
         },
       ],
-      model: LanguageModel.GPT3_5_16K,
+      model: LanguageModel.BUAA_GPT,
     });
 
     // Verify that getMessagesTokenCount was called with the correct messages
@@ -96,7 +96,7 @@ describe('chainSummaryTitle', () => {
           role: 'user',
         },
       ],
-      model: 'gpt-3.5-turbo-16k',
+      model: 'buaa-gpt',
     });
 
     // Verify that getMessagesTokenCount was called with the correct messages

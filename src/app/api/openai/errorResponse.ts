@@ -1,6 +1,6 @@
 import { ChatErrorType, ErrorResponse, ErrorType } from '@/types/fetch';
 
-const getStatus = (errorType: ErrorType) => {
+export const getStatus = (errorType: ErrorType) => {
   switch (errorType) {
     case ChatErrorType.NoAPIKey:
     case ChatErrorType.InvalidAccessCode: {

@@ -46,7 +46,7 @@ const mockedChats = [
     content: 'Hello World',
     role: 'user',
     meta: {
-      avatar: '😀',
+      avatar: '👨🏻‍🎓',
     },
   },
   {
@@ -54,7 +54,7 @@ const mockedChats = [
     content: 'Goodbye World',
     role: 'user',
     meta: {
-      avatar: '😀',
+      avatar: '👨🏻‍🎓',
     },
   },
   {
@@ -167,7 +167,7 @@ describe('chatSelectors', () => {
           content: 'Goodbye World',
           role: 'user',
           meta: {
-            avatar: '😀',
+            avatar: '👨🏻‍🎓',
           },
         },
         {

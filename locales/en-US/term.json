@@ -1,0 +1,8 @@
+{
+  "guides": {
+    "anomaly": "Anomaly Detection",
+    "crack": "Crack Identification",
+    "fill": "Fill",
+    "predict": "Predict Morphological Trends"
+  }
+}

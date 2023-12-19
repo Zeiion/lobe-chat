@@ -1,19 +1,23 @@
 import { PluginRequestPayload, createHeadersWithPluginSettings } from '@lobehub/chat-plugin-sdk';
+import i18next from 'i18next';
 import { produce } from 'immer';
 import { merge } from 'lodash-es';
 
+import { getStatus } from '@/app/api/openai/errorResponse';
 import { isVisionModel } from '@/const/llm';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { filesSelectors, useFileStore } from '@/store/file';
+import { globalHelpers } from '@/store/global/helpers';
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors, toolSelectors } from '@/store/tool/selectors';
+import { ChatErrorType } from '@/types/fetch';
 import { ChatMessage } from '@/types/message';
 import type { OpenAIChatMessage, OpenAIChatStreamPayload } from '@/types/openai/chat';
 import { UserMessageContentPart } from '@/types/openai/chat';
 import { fetchAIFactory, getMessageError } from '@/utils/fetch';
 
 import { createHeaderWithOpenAI } from './_header';
-import { OPENAI_URLS, PLUGINS_URLS } from './_url';
+import { LLM_REQUEST_URLS, PLUGINS_URLS } from './_url';
 
 interface FetchOptions {
   signal?: AbortSignal | undefined;
@@ -68,7 +72,30 @@ class ChatService {
       params,
     );
 
-    return fetch(OPENAI_URLS.chat, {
+    // TODO message filter
+    const last = params.messages?.at(-1);
+    const currentLanguage = globalHelpers.getCurrentLanguage();
+    const keywords = i18next?.getResourceBundle?.(currentLanguage, 'term');
+    if (
+      last &&
+      !Object.values(keywords?.guides ?? []).some((v) => {
+        if (typeof last.content === 'string') {
+          return last.content.includes(v as string);
+        } else {
+          // TODO
+          return false;
+        }
+      })
+    ) {
+      return new Promise((resolve) => {
+        const resp = new Response('NOT ALLOWED', { status: getStatus(ChatErrorType.NotAllowed) });
+        setTimeout(() => {
+          resolve(resp);
+        }, 0);
+      }) as Promise<Response>;
+    }
+
+    return fetch(LLM_REQUEST_URLS.chat, {
       body: JSON.stringify(payload),
       headers: createHeaderWithOpenAI({ 'Content-Type': 'application/json' }),
       method: 'POST',

@@ -45,21 +45,22 @@ const Token = memo(() => {
 
   const totalToken = systemRoleToken + chatsToken + toolsToken;
   return (
-    <Tooltip
-      placement={'bottom'}
-      title={t('tokenDetail', { chatsToken, systemRoleToken, toolsToken })}
-    >
-      <TokenTag
-        maxValue={ModelTokens[model]}
-        style={{ marginLeft: 8 }}
-        text={{
-          overload: t('tokenTag.overload'),
-          remained: t('tokenTag.remained'),
-          used: t('tokenTag.used'),
-        }}
-        value={totalToken + inputTokenCount}
-      />
-    </Tooltip>
+    // <Tooltip
+    //   placement={'bottom'}
+    //   title={t('tokenDetail', { chatsToken, systemRoleToken, toolsToken })}
+    // >
+    //   <TokenTag
+    //     maxValue={ModelTokens[model]}
+    //     style={{ marginLeft: 8 }}
+    //     text={{
+    //       overload: t('tokenTag.overload'),
+    //       remained: t('tokenTag.remained'),
+    //       used: t('tokenTag.used'),
+    //     }}
+    //     value={totalToken + inputTokenCount}
+    //   />
+    // </Tooltip>
+    null
   );
 });
 

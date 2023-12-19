@@ -36,65 +36,65 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
     s.useCheckLatestVersion,
   ]);
 
-  useCheckLatestVersion();
+  // useCheckLatestVersion();
 
   const items: MenuProps['items'] = [
-    {
-      icon: <Icon icon={HardDriveUpload} />,
-      key: 'import',
-      label: <DataImporter>{t('import')}</DataImporter>,
-    },
-    {
-      children: [
-        {
-          key: 'allAgent',
-          label: <div>{t('exportType.allAgent')}</div>,
-          onClick: configService.exportAgents,
-        },
-        {
-          key: 'allAgentWithMessage',
-          label: <div>{t('exportType.allAgentWithMessage')}</div>,
-          onClick: configService.exportSessions,
-        },
-        {
-          key: 'globalSetting',
-          label: <div>{t('exportType.globalSetting')}</div>,
-          onClick: configService.exportSettings,
-        },
-        {
-          type: 'divider',
-        },
-        {
-          key: 'all',
-          label: <div>{t('exportType.all')}</div>,
-          onClick: configService.exportAll,
-        },
-      ],
-      icon: <Icon icon={HardDriveDownload} />,
-      key: 'export',
-      label: t('export'),
-    },
-    {
-      type: 'divider',
-    },
+    // {
+    //   icon: <Icon icon={HardDriveUpload} />,
+    //   key: 'import',
+    //   label: <DataImporter>{t('import')}</DataImporter>,
+    // },
+    // {
+    //   children: [
+    //     {
+    //       key: 'allAgent',
+    //       label: <div>{t('exportType.allAgent')}</div>,
+    //       onClick: configService.exportAgents,
+    //     },
+    //     {
+    //       key: 'allAgentWithMessage',
+    //       label: <div>{t('exportType.allAgentWithMessage')}</div>,
+    //       onClick: configService.exportSessions,
+    //     },
+    //     {
+    //       key: 'globalSetting',
+    //       label: <div>{t('exportType.globalSetting')}</div>,
+    //       onClick: configService.exportSettings,
+    //     },
+    //     {
+    //       type: 'divider',
+    //     },
+    //     {
+    //       key: 'all',
+    //       label: <div>{t('exportType.all')}</div>,
+    //       onClick: configService.exportAll,
+    //     },
+    //   ],
+    //   icon: <Icon icon={HardDriveDownload} />,
+    //   key: 'export',
+    //   label: t('export'),
+    // },
+    // {
+    //   type: 'divider',
+    // },
     {
       icon: <Icon icon={Feather} />,
       key: 'feedback',
       label: t('feedback'),
       onClick: () => window.open(FEEDBACK, '__blank'),
     },
-    {
-      icon: <Icon icon={FileClock} />,
-      key: 'changelog',
-      label: t('changelog'),
-      onClick: () => window.open(CHANGELOG, '__blank'),
-    },
-    {
-      icon: <Icon icon={Book} />,
-      key: 'wiki',
-      label: 'WIKI',
-      onClick: () => window.open(WIKI, '__blank'),
-    },
+    // {
+    //   icon: <Icon icon={FileClock} />,
+    //   key: 'changelog',
+    //   label: t('changelog'),
+    //   onClick: () => window.open(CHANGELOG, '__blank'),
+    // },
+    // {
+    //   icon: <Icon icon={Book} />,
+    //   key: 'wiki',
+    //   label: 'WIKI',
+    //   onClick: () => window.open(WIKI, '__blank'),
+    // },
     {
       icon: <Icon icon={Heart} />,
       key: 'about',
@@ -125,7 +125,7 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
 
   return (
     <>
-      <ActionIcon
+      {/* <ActionIcon
         icon={DiscordIcon}
         onClick={() => window.open(DISCORD, '__blank')}
         placement={'right'}
@@ -136,9 +136,9 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
         onClick={() => window.open(GITHUB, '__blank')}
         placement={'right'}
         title={'GitHub'}
-      />
+      /> */}
       <Dropdown arrow={false} menu={{ items }} trigger={['click']}>
-        {hasNewVersion ? (
+        {/* {hasNewVersion ? (
           <Flexbox>
             <ConfigProvider theme={{ components: { Badge: { dotSize: 8 } } }}>
               <Badge dot offset={[-4, 4]}>
@@ -146,9 +146,9 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
               </Badge>
             </ConfigProvider>
           </Flexbox>
-        ) : (
-          <ActionIcon active={tab === SidebarTabKey.Setting} icon={Settings2} />
-        )}
+        ) : ( */}
+        <ActionIcon active={tab === SidebarTabKey.Setting} icon={Settings2} />
+        {/* )} */}
       </Dropdown>
     </>
   );

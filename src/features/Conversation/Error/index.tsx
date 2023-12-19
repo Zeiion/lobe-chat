@@ -4,6 +4,7 @@ import { ChatErrorType } from '@/types/fetch';
 
 import { RenderErrorMessage } from '../types';
 import InvalidAccess from './InvalidAccess';
+import NotAllowed from './NotAllowed';
 import OpenAPIKey from './OpenAPIKey';
 import OpenAiBizError from './OpenAiBizError';
 import PluginError from './Plugin/PluginError';
@@ -69,6 +70,14 @@ export const renderErrorMessages: Record<string, RenderErrorMessage> = {
   },
   [ChatErrorType.OpenAIBizError]: {
     Render: OpenAiBizError,
+    config: {
+      extraDefaultExpand: true,
+      extraIsolate: true,
+      type: 'warning',
+    },
+  },
+  [ChatErrorType.NotAllowed]: {
+    Render: NotAllowed,
     config: {
       extraDefaultExpand: true,
       extraIsolate: true,

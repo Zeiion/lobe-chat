@@ -1,9 +1,9 @@
-import { Logo } from '@lobehub/ui';
 import { Upload } from 'antd';
 import { createStyles } from 'antd-style';
 import Avatar from 'next/image';
 import { CSSProperties, memo } from 'react';
 
+import Logo from '@/components/common/Logo';
 import { useGlobalStore } from '@/store/global';
 import { imageToBase64 } from '@/utils/imageToBase64';
 import { createUploadImageHandler } from '@/utils/uploadFIle';
@@ -18,7 +18,7 @@ const useStyle = createStyles(
       box-shadow 100ms ${token.motionEaseOut};
 
     &:hover {
-      box-shadow: 0 0 0 3px ${token.colorText};
+      box-shadow: 0 0 1px 1px ${token.colorText};
     }
 
     &:active {
@@ -54,7 +54,7 @@ const AvatarWithUpload = memo<AvatarWithUploadProps>(
           {avatar ? (
             <Avatar alt={'avatar'} height={size} src={avatar} width={size} />
           ) : (
-            <Logo size={size} />
+            <Logo hideLogo={false} hideName size={size} />
           )}
         </Upload>
       </div>

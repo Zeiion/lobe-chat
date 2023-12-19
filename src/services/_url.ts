@@ -9,7 +9,7 @@ export const PLUGINS_URLS = {
   store: '/api/plugin/store',
 };
 
-export const OPENAI_URLS = {
+export const LLM_REQUEST_URLS = {
   chat: '/api/openai/chat',
   images: '/api/openai/images',
   models: '/api/openai/models',

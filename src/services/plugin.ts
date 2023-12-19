@@ -25,14 +25,11 @@ class PluginService {
     } catch {
       throw new TypeError('fetchError');
     }
-
     if (!res.ok) {
       throw new TypeError('fetchError');
     }
-
     let data;
     const contentType = res.headers.get('Content-Type');
-
     try {
       if (contentType === 'application/json') {
         data = await res.json();
@@ -45,7 +42,6 @@ class PluginService {
     } catch {
       throw new TypeError('urlError');
     }
-
     return data;
   };
   /**

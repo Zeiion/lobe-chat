@@ -1,10 +1,10 @@
 import { LanguageModelWhiteList } from '@/const/llm';
 
 import { createHeaderWithOpenAI } from './_header';
-import { OPENAI_URLS } from './_url';
+import { LLM_REQUEST_URLS } from './_url';
 
 export const fetchModelList = async (): Promise<string[]> => {
-  const res = await fetch(OPENAI_URLS.models, {
+  const res = await fetch(LLM_REQUEST_URLS.models, {
     headers: createHeaderWithOpenAI(),
     method: 'POST',
   });

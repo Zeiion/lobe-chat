@@ -21,8 +21,9 @@ export const AssistantMessageExtra: RenderMessageExtra = memo<ChatMessage>(
     const showModelTag = extra?.fromModel && model !== extra?.fromModel;
     const showTranslate = !!extra?.translate;
     const showTTS = !!extra?.tts;
+    const showNode = !!extra?.node;
 
-    const showExtra = showModelTag || showTranslate || showTTS;
+    const showExtra = showModelTag || showNode || showTranslate || showTTS;
 
     if (!showExtra) return;
 
@@ -34,6 +35,7 @@ export const AssistantMessageExtra: RenderMessageExtra = memo<ChatMessage>(
           </div>
         )}
         <>
+          {extra?.node && <ExtraContainer>{extra.node}</ExtraContainer>}
           {extra?.tts && (
             <ExtraContainer>
               <TTS content={content} id={id} loading={loading} {...extra?.tts} />

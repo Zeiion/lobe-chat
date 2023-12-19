@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { ErrorType } from '@/types/fetch';
 import { Translate } from '@/types/translate';
 
@@ -32,6 +34,8 @@ export interface ChatMessage extends BaseDataModel {
   // 扩展字段
   extra?: {
     fromModel?: string;
+    // 额外元素
+    node?: ReactNode;
     // 翻译
     translate?: ChatTranslate | false;
     // TTS

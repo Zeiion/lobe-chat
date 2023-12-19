@@ -24,7 +24,7 @@ export const chainSummaryTitle = async (
   const tokens = await chatHelpers.getMessagesTokenCount(finalMessages);
   let model: LanguageModel | undefined = undefined;
   if (tokens > 4000) {
-    model = LanguageModel.GPT3_5_16K;
+    model = LanguageModel.BUAA_GPT; // TODO
   }
 
   return {
