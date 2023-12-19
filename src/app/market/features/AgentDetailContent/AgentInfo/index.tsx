@@ -29,7 +29,7 @@ const AgentModalInner = memo(() => {
 
   if (isLoading || !data?.meta) return <Loading />;
 
-  const { config, meta, identifier } = data;
+  const { config = { systemRole: '' }, meta, identifier } = data;
   const { systemRole } = config;
 
   return (
@@ -49,10 +49,10 @@ const AgentModalInner = memo(() => {
                 </Flexbox>
               ),
             },
-            {
-              key: InfoTabs.comment,
-              label: t('sidebar.comment'),
-            },
+            // {
+            //   key: InfoTabs.comment,
+            //   label: t('sidebar.comment'),
+            // },
           ]}
           onChange={setTab}
           variant={'compact'}
@@ -64,7 +64,7 @@ const AgentModalInner = memo(() => {
             {systemRole}
           </Markdown>
         )}
-        {tab === InfoTabs.comment && <Comment identifier={identifier} />}
+        {/* {tab === InfoTabs.comment && <Comment identifier={identifier} />} */}
       </Flexbox>
     </>
   );

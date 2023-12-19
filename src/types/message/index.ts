@@ -1,4 +1,5 @@
 import { IPluginErrorType } from '@lobehub/chat-plugin-sdk';
+import { ReactNode } from 'react';
 
 import { ILobeAgentRuntimeErrorType } from '@/libs/agent-runtime';
 import { ErrorType } from '@/types/fetch';
@@ -36,6 +37,8 @@ export interface ChatMessage extends BaseDataModel {
   extra?: {
     fromModel?: string;
     fromProvider?: string;
+    // 额外元素
+    node?: ReactNode;
     // 翻译
     translate?: ChatTranslate | false;
     // TTS

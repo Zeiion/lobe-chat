@@ -13,12 +13,14 @@ export default {
   defaultList: '默认列表',
   defaultSession: '自定义助手',
   duplicateTitle: '{{title}} 副本',
+  guideMessage: {
+    prefix: '您可以试着问我：',
+  },
   historyRange: '历史范围',
   inbox: {
-    defaultMessage:
-      '你好，我是你的智能助手，你可以问我任何问题，我会尽力回答你。如果需要获得更加专业或定制的助手，可以点击`+`创建自定义助手',
-    desc: '开启大脑集群，激发思维火花。你的智能助理，在这里与你交流一切',
-    title: '随便聊聊',
+    defaultMessage: '你好，我是你的智能助手，作为你的智能伙伴，我可以预测性态趋势，检测异常指标等',
+    desc: '你的智能交通、土木大模型',
+    title: '智能助手',
   },
   input: {
     onlyAdd: '仅添加消息',

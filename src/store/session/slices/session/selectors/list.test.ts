@@ -12,7 +12,7 @@ describe('currentSession', () => {
       {
         id: '1',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -21,7 +21,7 @@ describe('currentSession', () => {
       {
         id: '2',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -46,7 +46,7 @@ describe('currentSessionSafe', () => {
       {
         id: '1',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -55,7 +55,7 @@ describe('currentSessionSafe', () => {
       {
         id: '2',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -80,7 +80,7 @@ describe('getSessionById', () => {
       {
         id: '1',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },
@@ -89,7 +89,7 @@ describe('getSessionById', () => {
       {
         id: '2',
         config: {
-          model: LanguageModel.GPT3_5,
+          model: LanguageModel.BUAA_GPT,
           params: {},
           systemRole: 'system-role',
         },

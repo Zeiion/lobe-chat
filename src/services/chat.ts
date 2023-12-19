@@ -9,6 +9,7 @@ import { useGlobalStore } from '@/store/global';
 import { modelProviderSelectors } from '@/store/global/selectors';
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors, toolSelectors } from '@/store/tool/selectors';
+import { ChatErrorType } from '@/types/fetch';
 import { ChatMessage } from '@/types/message';
 import type { ChatStreamPayload, OpenAIChatMessage } from '@/types/openai/chat';
 import { UserMessageContentPart } from '@/types/openai/chat';
@@ -81,7 +82,8 @@ class ChatService {
       provider,
     });
 
-    return fetch(API_ENDPOINTS.chat(provider), {
+    // return fetch(API_ENDPOINTS.chat(provider), {
+    return fetch(API_ENDPOINTS.chat, {
       body: JSON.stringify(payload),
       headers,
       method: 'POST',

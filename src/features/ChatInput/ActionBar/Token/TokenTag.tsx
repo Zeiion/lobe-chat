@@ -57,49 +57,50 @@ const Token = memo(() => {
   // Total token
   const totalToken = systemRoleToken + toolsToken + chatsToken;
   return (
-    <Tooltip
-      placement={'bottom'}
-      title={
-        <Flexbox width={150}>
-          <Flexbox horizontal justify={'space-between'}>
-            <span>{t('tokenDetails.systemRole')}</span>
-            <span>{format(systemRoleToken)}</span>
-          </Flexbox>
-          <Flexbox horizontal justify={'space-between'}>
-            <span>{t('tokenDetails.tools')}</span>
-            <span>{format(toolsToken)}</span>
-          </Flexbox>
-          <Flexbox horizontal justify={'space-between'}>
-            <span>{t('tokenDetails.chats')}</span>
-            <span>{format(chatsToken)}</span>
-          </Flexbox>
-          <Flexbox horizontal justify={'space-between'}>
-            <span>{t('tokenDetails.used')}</span>
-            <span>{format(totalToken)}</span>
-          </Flexbox>
-          <Flexbox horizontal justify={'space-between'} style={{ marginTop: 8 }}>
-            <span>{t('tokenDetails.total')}</span>
-            <span>{format(maxTokens)}</span>
-          </Flexbox>
-          <Flexbox horizontal justify={'space-between'}>
-            <span>{t('tokenDetails.rest')}</span>
-            <span>{format(maxTokens - totalToken)}</span>
-          </Flexbox>
-        </Flexbox>
-      }
-    >
-      <TokenTag
-        displayMode={'used'}
-        maxValue={maxTokens}
-        style={{ marginLeft: 8 }}
-        text={{
-          overload: t('tokenTag.overload'),
-          remained: t('tokenTag.remained'),
-          used: t('tokenTag.used'),
-        }}
-        value={totalToken}
-      />
-    </Tooltip>
+    // <Tooltip
+    //   placement={'bottom'}
+    //   title={
+    //     <Flexbox width={150}>
+    //       <Flexbox horizontal justify={'space-between'}>
+    //         <span>{t('tokenDetails.systemRole')}</span>
+    //         <span>{format(systemRoleToken)}</span>
+    //       </Flexbox>
+    //       <Flexbox horizontal justify={'space-between'}>
+    //         <span>{t('tokenDetails.tools')}</span>
+    //         <span>{format(toolsToken)}</span>
+    //       </Flexbox>
+    //       <Flexbox horizontal justify={'space-between'}>
+    //         <span>{t('tokenDetails.chats')}</span>
+    //         <span>{format(chatsToken)}</span>
+    //       </Flexbox>
+    //       <Flexbox horizontal justify={'space-between'}>
+    //         <span>{t('tokenDetails.used')}</span>
+    //         <span>{format(totalToken)}</span>
+    //       </Flexbox>
+    //       <Flexbox horizontal justify={'space-between'} style={{ marginTop: 8 }}>
+    //         <span>{t('tokenDetails.total')}</span>
+    //         <span>{format(maxTokens)}</span>
+    //       </Flexbox>
+    //       <Flexbox horizontal justify={'space-between'}>
+    //         <span>{t('tokenDetails.rest')}</span>
+    //         <span>{format(maxTokens - totalToken)}</span>
+    //       </Flexbox>
+    //     </Flexbox>
+    //   }
+    // >
+    //   <TokenTag
+    //     displayMode={'used'}
+    //     maxValue={maxTokens}
+    //     style={{ marginLeft: 8 }}
+    //     text={{
+    //       overload: t('tokenTag.overload'),
+    //       remained: t('tokenTag.remained'),
+    //       used: t('tokenTag.used'),
+    //     }}
+    //     value={totalToken}
+    //   />
+    // </Tooltip>
+    null
   );
 });
 

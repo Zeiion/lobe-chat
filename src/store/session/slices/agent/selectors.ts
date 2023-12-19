@@ -32,7 +32,7 @@ const currentAgentSystemRole = (s: SessionStore) => {
 const currentAgentModel = (s: SessionStore): LanguageModel | string => {
   const config = currentAgentConfig(s);
 
-  return config?.model || LanguageModel.GPT3_5;
+  return config?.model || LanguageModel.BUAA_GPT;
 };
 
 const currentAgentModelProvider = (s: SessionStore) => {

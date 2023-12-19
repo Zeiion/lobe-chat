@@ -1,4 +1,5 @@
-import { ActionEvent, ActionIconGroup, type ActionIconGroupProps } from '@lobehub/ui';
+import { ActionIconGroup, type ActionIconGroupProps } from '@lobehub/ui';
+import { ActionEvent } from '@lobehub/ui/es/ActionIconGroup';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback } from 'react';
 
