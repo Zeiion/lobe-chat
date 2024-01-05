@@ -10,7 +10,7 @@ export const PLUGINS_URLS = {
 };
 
 export const LLM_REQUEST_URLS = {
-  chat: '/api/openai/chat',
+  chat: 'https://mock.apifox.com/m1/2773542-0-default/api/openai/chat',
   images: '/api/openai/images',
   models: '/api/openai/models',
   stt: '/api/openai/stt',
