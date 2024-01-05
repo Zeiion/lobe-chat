@@ -20,7 +20,7 @@ const Redirect = memo(() => {
       if (hasData) {
         router.replace('/chat');
       } else {
-        router.replace('/welcome');
+        router.push('/chat');
       }
     });
   }, []);
