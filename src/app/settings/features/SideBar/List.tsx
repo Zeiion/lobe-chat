@@ -16,7 +16,7 @@ const List = memo(() => {
 
   const items = [
     { icon: Settings2, label: t('tab.common'), value: SettingsTabs.Common },
-    { icon: Webhook, label: t('tab.llm'), value: SettingsTabs.LLM },
+    // { icon: Webhook, label: t('tab.llm'), value: SettingsTabs.LLM },
     { icon: Mic2, label: t('tab.tts'), value: SettingsTabs.TTS },
     { icon: Bot, label: t('tab.agent'), value: SettingsTabs.Agent },
   ];
