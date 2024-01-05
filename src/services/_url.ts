@@ -28,7 +28,9 @@ export const API_ENDPOINTS = mapWithBasePath({
   pluginStore: '/api/plugin/store',
 
   // chat: (provider: string) => withBasePath(`/api/chat/${provider}`),
-  chat: '/api/openai/chat',
+  // chat: 'https://mock.apifox.com/m1/2773542-0-default/api/openai/chat',
+  // chat: 'http://localhost:8085/chat',
+  chat: 'http://39.106.1.86:8085/chat',
   images: '/api/openai/images',
 
   // TTS & STT
