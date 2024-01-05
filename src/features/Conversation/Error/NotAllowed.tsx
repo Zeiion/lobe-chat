@@ -1,9 +1,9 @@
-import { RenderErrorMessage } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import GuideMessage from '@/app/chat/features/Conversation/ChatList/Extras/GuideMessage';
 
+import { RenderErrorMessage } from '../types';
 import { ErrorActionContainer } from './style';
 
 const NotAllowed: RenderErrorMessage['Render'] = memo(() => {
