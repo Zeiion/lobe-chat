@@ -1,8 +1,20 @@
 {
   "guides": {
-    "anomaly": "Anomaly Detection",
-    "crack": "Crack Identification",
-    "fill": "Fill",
-    "predict": "Predict Morphological Trends"
+    "predict": {
+      "title": "Predict Morphological Trends",
+      "content": "Predict the morphological trends of soil and rock tomorrow"
+    },
+    "anomaly": {
+      "title": "Anomaly Detection",
+      "content": "Please introduce common anomaly detection algorithms"
+    },
+    "crack": {
+      "title": "Crack Identification",
+      "content": "Give an example of crack identification"
+    },
+    "fill": {
+      "title": "Fill",
+      "content": "Give an example of filling"
+    }
   }
 }

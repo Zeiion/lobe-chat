@@ -1,3 +1,5 @@
+import { LanguageModel } from '@/types/llm';
+
 import { GlobalStore } from '../../../store';
 import { settingsSelectors } from './settings';
 
@@ -16,7 +18,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: '',
-              model: 'gpt-3.5-turbo',
+              model: LanguageModel.BUAA_GPT,
               params: {},
               tts: {
                 showAllLocaleVoice: false,
@@ -63,7 +65,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: 'user',
-              model: 'gpt-3.5-turbo',
+              model: LanguageModel.BUAA_GPT,
             },
             meta: {
               avatar: 'agent-avatar.jpg',
@@ -86,7 +88,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: 'user',
-              model: 'gpt-3.5-turbo',
+              model: LanguageModel.BUAA_GPT,
               params: {
                 temperature: 0.7,
               },

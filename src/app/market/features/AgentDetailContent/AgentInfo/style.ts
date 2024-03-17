@@ -27,6 +27,7 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => ({
       flex-direction: column;
     }
   `,
+  // markdown: stylish.markdown,
   nav: css`
     padding-top: 8px;
   `,

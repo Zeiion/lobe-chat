@@ -33,6 +33,7 @@ export const useStyles = createStyles(({ css, token, stylish, cx }, withBackgrou
     background: ${token.colorBgContainer};
     border-bottom: 1px solid ${token.colorBorder};
   `,
+  markdown: stylish.markdown,
   preview: cx(
     stylish.noScrollbar,
     css`

@@ -16,6 +16,7 @@ const useStyles = createStyles(({ css, token }) => ({
     color: ${token.colorTextDescription};
     text-align: center;
   `,
+  // markdown: stylish.markdown,
   title: css`
     font-size: 20px;
     font-weight: 600;

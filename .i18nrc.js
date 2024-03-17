@@ -17,7 +17,7 @@ module.exports = defineConfig({
     // 'de_DE',
   ],
   temperature: 0,
-  modelName: 'gpt-3.5-turbo-1106',
+  modelName: '',
   splitToken: 1024,
   experimental: {
     jsonMode: true,
