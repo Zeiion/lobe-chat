@@ -76,24 +76,26 @@ class ChatService {
     const last = params.messages?.at(-1);
     const currentLanguage = globalHelpers.getCurrentLanguage();
     const keywords = i18next?.getResourceBundle?.(currentLanguage, 'term');
-    if (
-      last &&
-      !Object.values(keywords?.guides ?? []).some((v) => {
-        if (typeof last.content === 'string') {
-          return last.content.includes(v as string);
-        } else {
-          // TODO
-          return false;
-        }
-      })
-    ) {
-      return new Promise((resolve) => {
-        const resp = new Response('NOT ALLOWED', { status: getStatus(ChatErrorType.NotAllowed) });
-        setTimeout(() => {
-          resolve(resp);
-        }, 0);
-      }) as Promise<Response>;
-    }
+
+    // filter the message that contains the keywords
+    // if (
+    //   last &&
+    //   !Object.values(keywords?.guides ?? []).some((v) => {
+    //     if (typeof last.content === 'string') {
+    //       return last.content.includes(v as string);
+    //     } else {
+    //       // TODO
+    //       return false;
+    //     }
+    //   })
+    // ) {
+    //   return new Promise((resolve) => {
+    //     const resp = new Response('NOT ALLOWED', { status: getStatus(ChatErrorType.NotAllowed) });
+    //     setTimeout(() => {
+    //       resolve(resp);
+    //     }, 0);
+    //   }) as Promise<Response>;
+    // }
 
     return fetch(LLM_REQUEST_URLS.chat, {
       body: JSON.stringify(payload),
