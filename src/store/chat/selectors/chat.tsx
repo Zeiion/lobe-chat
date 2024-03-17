@@ -18,7 +18,7 @@ const getMeta = (message: ChatMessage) => {
   switch (message.role) {
     case 'user': {
       return {
-        avatar: useGlobalStore.getState().settings.avatar || DEFAULT_USER_AVATAR,
+        avatar: useGlobalStore.getState().avatar || DEFAULT_USER_AVATAR,
       };
     }
 

@@ -18,7 +18,7 @@
 //           defaultAgent: {
 //             config: {
 //               systemRole: '',
-//               model: LanguageModel.GPT3_5,
+//               model: LanguageModel.BUAA_GPT,
 //               params: {},
 //               tts: {
 //                 showAllLocaleVoice: false,

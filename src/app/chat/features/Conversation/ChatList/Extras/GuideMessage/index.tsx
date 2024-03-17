@@ -1,7 +1,8 @@
-import { GradientButton } from '@lobehub/ui';
+import { EmptyCard, Features, GradientButton, SpotlightCard } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Flexbox } from 'react-layout-kit';
 
 import { useChatInput } from '@/features/ChatInput/useChatInput';
 
@@ -10,12 +11,6 @@ const useStyles = createStyles(({ css, token }) => ({
     display: flex;
     flex-direction: column;
     gap: 6px;
-  `,
-  item: css`
-    width: 300px;
-    padding: 4px;
-    color: ${token.colorPrimaryText};
-    text-align: left;
   `,
   list: css`
     display: flex;
@@ -35,7 +30,7 @@ interface GuideMessageProps {
 
 const GuideMessage = memo<GuideMessageProps>(({ className }) => {
   const { cx, styles } = useStyles();
-  const { t, i18n } = useTranslation('chat');
+  const { t } = useTranslation('chat');
 
   const { onSend, onInput } = useChatInput();
 
@@ -48,40 +43,51 @@ const GuideMessage = memo<GuideMessageProps>(({ className }) => {
   // TODO tt
   const guides = [
     {
-      content: tt('guides.predict', { ns: 'term' }),
-      label: tt('guides.predict', { ns: 'term' }),
+      content: tt('guides.predict.content'),
+      title: tt('guides.predict.title'),
     },
     {
-      content: t('guides.anomaly', { ns: 'term' }),
-      label: t('guides.anomaly', { ns: 'term' }),
+      content: tt('guides.anomaly.content'),
+      title: tt('guides.anomaly.title'),
     },
     {
-      content: t('guides.crack', { ns: 'term' }),
-      label: t('guides.crack', { ns: 'term' }),
+      content: tt('guides.crack.content'),
+      title: tt('guides.crack.title'),
     },
     {
-      content: t('guides.fill', { ns: 'term' }),
-      label: t('guides.fill', { ns: 'term' }),
+      content: tt('guides.fill.content'),
+      title: tt('guides.fill.title'),
     },
   ];
 
   return (
     <div className={cx(styles.guide, className)}>
       <div>{t('guideMessage.prefix')}</div>
-      <div className={styles.list}>
-        {guides.map(({ content, label }) => (
-          <div key={label} style={{ display: 'contents' }}>
-            <GradientButton
-              className={styles.item}
-              glow={false}
-              onClick={() => handleSelectGuide(content)}
-              size="large"
-            >
-              {label}
-            </GradientButton>
-          </div>
-        ))}
-      </div>
+      {/* {
+          // guides.map(({ content, title }) => (
+          // <div key={title} style={{ display: 'contents' }}>
+          //   <GradientButton
+          //     className={styles.item}
+          //     size="large"
+          //   >
+          //     {title}
+          //   </GradientButton>
+          // </div>
+          // ))
+        } */}
+      <SpotlightCard
+        items={guides}
+        renderItem={({ content, title }) => (
+          <Flexbox
+            direction="vertical"
+            onClick={() => handleSelectGuide(content)}
+            style={{ padding: 10 }}
+          >
+            <div style={{ fontSize: 15, fontWeight: 600 }}>{title}</div>
+            <div style={{ opacity: 0.6 }}>{content}</div>
+          </Flexbox>
+        )}
+      />
     </div>
   );
 });

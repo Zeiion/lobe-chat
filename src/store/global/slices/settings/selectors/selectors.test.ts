@@ -18,7 +18,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: '',
-              model: LanguageModel.GPT3_5,
+              model: LanguageModel.BUAA_GPT,
               params: {},
               tts: {
                 showAllLocaleVoice: false,
@@ -65,7 +65,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: 'user',
-              model: LanguageModel.GPT3_5,
+              model: LanguageModel.BUAA_GPT,
             },
             meta: {
               avatar: 'agent-avatar.jpg',
@@ -88,7 +88,7 @@ describe('settingsSelectors', () => {
           defaultAgent: {
             config: {
               systemRole: 'user',
-              model: LanguageModel.GPT3_5,
+              model: LanguageModel.BUAA_GPT,
               params: {
                 temperature: 0.7,
               },
