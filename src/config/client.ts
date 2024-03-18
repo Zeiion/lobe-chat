@@ -37,7 +37,7 @@ declare global {
 }
 
 export const getClientConfig = () => ({
-  BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  BASE_PATH: process.env.API_PROXY_ENDPOINT || process.env.NEXT_PUBLIC_BASE_PATH || '',
 
   // docs
   LOBE_CHAT_DOCS: process.env.NEXT_PUBLIC_LOBE_CHAT_DOCS,

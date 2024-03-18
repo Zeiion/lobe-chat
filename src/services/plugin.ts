@@ -49,11 +49,17 @@ class PluginService {
    * get plugin list from store
    */
   getPluginList = async (): Promise<LobeChatPluginsMarketIndex> => {
-    const locale = globalHelpers.getCurrentLanguage();
+    // const locale = globalHelpers.getCurrentLanguage();
+    return new Promise((resolve) => {
+      resolve({
+        plugins: [],
+        schemaVersion: 1,
+      });
+    });
 
-    const res = await fetch(`${API_ENDPOINTS.pluginStore}?locale=${locale}`);
+    // const res = await fetch(`${API_ENDPOINTS.pluginStore}?locale=${locale}`);
 
-    return res.json();
+    // return res.json();
   };
 
   getPluginManifest = async (
