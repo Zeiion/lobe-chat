@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import nextPWA from '@ducanh2912/next-pwa';
 import analyzer from '@next/bundle-analyzer';
 
@@ -54,6 +55,7 @@ const nextConfig = {
   rewrites: async () => [
     // due to google api not work correct in some countries
     // we need a proxy to bypass the restriction
+    { source: '/api', destination: `${API_PROXY_ENDPOINT}/api` },
     { source: '/api/chat/google', destination: `${API_PROXY_ENDPOINT}/api/chat/google` },
     { source: '/docs', destination: `${docsBasePath}/docs` },
     { source: '/docs/zh', destination: `${docsBasePath}/docs/zh` },

@@ -5,7 +5,7 @@ import { getServerConfig } from '@/config/server';
 
 import pkg from '../../package.json';
 
-const title = 'LobeChat';
+const title = 'StructureAI';
 const { description, homepage } = pkg;
 
 const { METADATA_BASE_URL = 'https://chat-preview.lobehub.com/' } = getServerConfig();
@@ -54,7 +54,7 @@ const metadata: Metadata = {
 
   title: {
     default: title,
-    template: '%s · LobeChat',
+    template: '%s · StructureAI',
   },
   twitter: {
     card: 'summary_large_image',

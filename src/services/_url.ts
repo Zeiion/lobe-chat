@@ -14,8 +14,7 @@ const mapWithBasePath = <T extends object>(apis: T): T => {
   });
 };
 
-// TODO check
-export const API_ENDPOINTS = mapWithBasePath({
+export const API_ENDPOINTS = {
   config: '/api/config',
   proxy: '/api/proxy',
   oauth: '/api/auth',
@@ -29,8 +28,9 @@ export const API_ENDPOINTS = mapWithBasePath({
 
   // chat: (provider: string) => withBasePath(`/api/chat/${provider}`),
   // chat: 'https://mock.apifox.com/m1/2773542-0-default/api/openai/chat',
-  // chat: 'http://localhost:8085/chat',
-  chat: 'http://39.106.1.86:8085/chat',
+  chat: 'http://127.0.0.1:8000/api/chat',
+  // chat: 'http://39.106.1.86:8085/chat',
+  // chat: 'http://39.97.209.211:8085/api/chat',
   images: '/api/openai/images',
 
   // TTS & STT
@@ -38,4 +38,4 @@ export const API_ENDPOINTS = mapWithBasePath({
   tts: '/api/openai/tts',
   edge: '/api/tts/edge-speech',
   microsoft: '/api/tts/microsoft-speech',
-});
+};
